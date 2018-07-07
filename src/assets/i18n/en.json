@@ -17,18 +17,18 @@
   "TUTORIAL_SKIP_BUTTON": "Skip",
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
 
-  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+  "TUTORIAL_SLIDE1_TITLE": "MUSICIAN",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "장소와 관객을 제공합니다.",
 
-  "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
+  "TUTORIAL_SLIDE2_TITLE": "FAN",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "자신의 취향에 맞는 공연, 뮤지션 정보를 제공하며, 가까운 곳에서 쉽고 편하게 공연을 관람할 수 있도록 합니다.",
 
-  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the Super Starter README for a full tutorial",
+  "TUTORIAL_SLIDE3_TITLE": "SPACE",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "라이브 뮤직이 필요한 레스토랑, 카페 뿐만 아니라 비어 있는 공연장소를 임대함으로서 수익을 극대화 합니다.",
 
-  "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
+  "TUTORIAL_SLIDE4_TITLE": "MUSIC BAR",
 
-  "WELCOME_INTRO": "The starting point for your next great Ionic app",
+  "WELCOME_INTRO": "MUSIC BAR IS THE PERFECT SOLUTON FOR YOUR CONCERT",
 
   "SETTINGS_TITLE": "Settings",
   "SETTINGS_OPTION1": "Option 1",
