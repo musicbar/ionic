@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, MenuController, NavController, Platform } from 'ionic-angular';
 
 import { TranslateService } from '@ngx-translate/core';
+import { MainPage } from '../';
 
 export interface Slide {
   title: string;
@@ -43,7 +44,7 @@ export class TutorialPage {
           },
           {
             title: values.TUTORIAL_SLIDE3_TITLE,
-            description: values.TUTORIAL_SLIDE3_DESCRIPTION,
+            description: values.TUTORIAL_SLIDE3_DESCRIPTION, 
             image: 'assets/img/ica-slidebox-img-3.png',
           }
         ];
@@ -51,10 +52,13 @@ export class TutorialPage {
   }
 
   startApp() {
+    /*
     this.navCtrl.setRoot('WelcomePage', {}, {
       animate: true,
       direction: 'forward'
     });
+    */
+    this.navCtrl.push(MainPage);
   }
 
   onSlideChangeStart(slider) {
