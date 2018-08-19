@@ -18,6 +18,11 @@ export class Musicians {
         "name": "name",
         "photo": "assets/img/musician/1.png",
         "description": "description"
+      },
+      {
+        "name": "name",
+        "photo": "assets/img/musician/3.png",
+        "description": "description"
       }
     ];
 
@@ -27,6 +32,7 @@ export class Musicians {
   }
 
   query(params?: any) {
+    /*
     if (!params) {
       return this.musicians;
     }
@@ -42,6 +48,9 @@ export class Musicians {
       }
       return null;
     });
+    */
+
+    return null;
   }
 
   add(musician: Musician) {

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
 
-import { Item } from '../../models/item';
 import { Items } from '../../providers';
+import { Musician } from '../../models/musician';
+import { Musicians } from '../../providers';
 
 @IonicPage()
 @Component({
@@ -10,39 +11,39 @@ import { Items } from '../../providers';
   templateUrl: 'musicians.html',
 })
 export class MusiciansPage {
-  currentItems: Item[];
+  currentMusicians: Musician[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController, public navParams: NavParams) {
-    this.currentItems = this.items.query();
+  constructor(public navCtrl: NavController, public musicians: Musicians, public modalCtrl: ModalController, public navParams: NavParams) {
+    this.currentMusicians = this.musicians.query();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MusiciansPage');
   }
 
-  addItem() {
-    let addModal = this.modalCtrl.create('ItemCreatePage');
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
+  addMusician() {
+    let addModal = this.modalCtrl.create('MusicianCreatePage');
+    addModal.onDidDismiss(musician => {
+      if (musician) {
+        this.musicians.add(musician);
       }
     })
     addModal.present();
   }
 
   /**
-   * Delete an item from the list of items.
+   * Delete an musician from the list of musicians.
    */
-  deleteItem(item) {
-    this.items.delete(item);
+  deleteMusician(musician) {
+    this.musicians.delete(musician);
   }
 
   /**
-   * Navigate to the detail page for this item.
+   * Navigate to the detail page for this musician.
    */
-  openItem(item: Item) {
-    this.navCtrl.push('ItemDetailPage', {
-      item: item
+  openMusician(musician: Musician) {
+    this.navCtrl.push('MusicianDetailPage', {
+      musician: musician
     });
   }
 }
