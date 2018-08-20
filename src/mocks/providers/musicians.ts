@@ -15,14 +15,54 @@ export class Musicians {
   constructor() {
     let musicians = [
       {
-        "name": "name",
+        "name": "Drake",
         "photo": "assets/img/musician/1.png",
-        "description": "description"
+        "description": "In My Feelings"
       },
       {
-        "name": "name",
+        "name": "Cardi B",
+        "photo": "assets/img/musician/2.png",
+        "description": "I Like It"
+      },
+      {
+        "name": "Maroon 5",
         "photo": "assets/img/musician/3.png",
-        "description": "description"
+        "description": "Girls Like You"
+      },
+      {
+        "name": "6ix9ine",
+        "photo": "assets/img/musician/4.png",
+        "description": "FEFE"
+      },
+      {
+        "name": "Post Malone",
+        "photo": "assets/img/musician/5.png",
+        "description": "Better Now"
+      },
+      {
+        "name": "Ella Mai",
+        "photo": "assets/img/musician/6.png",
+        "description": "Boo'd Up"
+      },
+      {
+        "name": "Juice WRLD",
+        "photo": "assets/img/musician/7.png",
+        "description": "Lucid Dreams"
+      },
+      {
+        "name": "Tyga",
+        "photo": "assets/img/musician/8.png",
+        "description": "Taste"
+      },
+      {
+        "name": "Ariana Grande",
+        "photo": "assets/img/musician/9.png",
+        "description": "No Tears Left To Cry"
+      },
+      {
+        "name": "Taylor Swift",
+        "photo": "assets/img/musician/10.png",
+        "description": "Delicate"
       }
     ];
 
@@ -32,7 +72,6 @@ export class Musicians {
   }
 
   query(params?: any) {
-    /*
     if (!params) {
       return this.musicians;
     }
@@ -48,9 +87,6 @@ export class Musicians {
       }
       return null;
     });
-    */
-
-    return null;
   }
 
   add(musician: Musician) {

@@ -16,17 +16,16 @@
   -->
 </ion-header>
 
-
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding *ngFor="let item of currentItems">
-      <button ion-item (click)="openItem(item)">
+    <ion-item-sliding *ngFor="let musician of currentMusicians">
+      <button ion-item (click)="openItem(musician)">
         <ion-avatar item-start>
-          <img [src]="item.profilePic" />
+          <img [src]="musician.photo" />
         </ion-avatar>
-        <h2>{{item.name}}</h2>
-        <p>{{item.about}}</p>
-        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+        <h2>{{musician.name}}</h2>
+        <p>{{musician.description}}</p>
+        <ion-note item-end *ngIf="musician.description">{{musician.description}}</ion-note>
       </button>
       <!--
       <ion-item-options>
