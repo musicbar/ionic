@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the MusicianDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Musicians } from '../../providers'
 
 @IonicPage()
 @Component({
@@ -14,8 +9,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'musician-detail.html',
 })
 export class MusicianDetailPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  musician: any;
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, musicians:Musicians) {
+    this.musician = navParams.get('musician') || musicians.defaultMusician;
   }
 
   ionViewDidLoad() {

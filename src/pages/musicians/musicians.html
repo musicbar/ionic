@@ -19,7 +19,7 @@
 <ion-content padding>
   <ion-list>
     <ion-item-sliding *ngFor="let musician of currentMusicians">
-      <button ion-item (click)="openItem(musician)">
+      <button ion-item (click)="openMusician(musician)">
         <ion-avatar item-start>
           <img [src]="musician.photo" />
         </ion-avatar>
