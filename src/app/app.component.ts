@@ -40,7 +40,7 @@ export class MyApp {
     { title: 'Login', component: 'LoginPage' },
     { title: 'Signup', component: 'SignupPage' },
     { title: 'Musicians', component: 'MusiciansPage' },
-    { title: 'Master Detail', component: 'ListMasterPage' },
+    { title: 'Spaces', component: 'SpacesPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
     { title: 'Search', component: 'SearchPage' },

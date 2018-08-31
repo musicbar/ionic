@@ -1,4 +1,4 @@
-export class Musician {
+export class Space {
   constructor(fields: any) {
     // Quick and dirty extend/assign fields to this model
     for (const f in fields) {
@@ -9,6 +9,6 @@ export class Musician {
 
 }
 
-export interface Musician {
+export interface Space {
   [prop: string]: any;
 }
