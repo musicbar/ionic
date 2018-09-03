@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Item } from '../../models/item';
+import { Space } from '../../models/space';
 import { Api } from '../api/api';
 
 @Injectable()
-export class Items {
+export class Spaces {
 
   constructor(public api: Api) { }
 
   query(params?: any) {
-    return this.api.get('/items', params);
+    return this.api.get('/spaces', params);
   }
 
-  add(item: Item) {
+  add(Space: Space) {
   }
 
-  delete(item: Item) {
+  delete(Space: Space) {
   }
 
 }

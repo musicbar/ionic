@@ -13,6 +13,7 @@ import { Musicians } from '../mocks/providers/musicians';
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
+import { SpacesProvider } from '../providers/spaces/spaces';
 
 // import { Musicians } from '../providers/musicians/musicians';
 
@@ -68,7 +69,8 @@ export function provideSettings(storage: Storage) {
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    Musicians
+    Musicians,
+    SpacesProvider
   ]
 })
 export class AppModule { }

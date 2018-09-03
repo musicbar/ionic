@@ -1,6 +1,8 @@
 <ion-header>
-  <ion-slides>
-  <!-- <ion-slides pager> -->
+  <div><img src="assets/img/search_bar.png" /></div>
+ 
+  <!--
+  <ion-slides pager>
     <ion-slide><img src="../../assets/img/banner_old.png" class="slide-image" /></ion-slide>
     <ion-slide><img src="../../assets/img/banner_old.png" class="slide-image" /></ion-slide>
     <ion-slide><img src="../../assets/img/banner_old.png" class="slide-image" /></ion-slide>
@@ -8,7 +10,6 @@
     <ion-slide><img src="../../assets/img/banner_old.png" class="slide-image" /></ion-slide>
     <ion-slide><img src="../../assets/img/banner_old.png" class="slide-image" /></ion-slide>
   </ion-slides>
-  <!--
   <ion-navbar>
     <ion-title>
     </ion-title>
@@ -18,14 +19,21 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding *ngFor="let musician of currentMusicians">
-      <button ion-item (click)="openMusician(musician)">
-        <ion-avatar item-start>
-          <img [src]="musician.photo" />
-        </ion-avatar>
-        <h2>{{musician.name}}</h2>
-        <p>{{musician.description}}</p>
-        <ion-note item-end *ngIf="musician.description">{{musician.description}}</ion-note>
+    <ion-item-sliding *ngFor="let space of currentSpaces">
+      <button ion-item (click)="openSpace(space)">
+          <img [src]="space.photo" />
+          <p align='center'>
+            <b>{{space.name}}</b><br>
+            <small>Available though <b>11/11</b><br>from <b>$50</b></small>
+          </p>
+          <!--
+          <ion-avatar item-start>
+            <img [src]="space.photo" />
+          </ion-avatar>
+          <h2>{{space.name}}</h2>
+          <p>{{space.description}}</p>
+          <ion-note item-end *ngIf="space.description">{{space.description}}</ion-note>
+          -->
       </button>
       <!--
       <ion-item-options>

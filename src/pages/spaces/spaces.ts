@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
-import { Musician } from '../../models/musician';
-import { Musicians } from '../../providers';
+import { Space } from '../../models/space';
+import { Spaces } from '../../providers';
 
 @IonicPage()
 @Component({
@@ -10,33 +10,35 @@ import { Musicians } from '../../providers';
 })
 export class SpacesPage {
 
-  currentMusicians: Musician[];
+  currentSpaces: Space[];
 
-  constructor(public navCtrl: NavController, public musicians: Musicians, public modalCtrl: ModalController, public navParams: NavParams) {
-    this.currentMusicians = this.musicians.query();
+  constructor(public navCtrl: NavController, public spaces: Spaces, public modalCtrl: ModalController, public navParams: NavParams) {
+    this.currentSpaces = this.spaces.query();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SpacesPage');
   }
 
-  addMusician() {
+  /*
+  addSpace() {
     let addModal = this.modalCtrl.create('SpacesCreatePage');
-    addModal.onDidDismiss(musician => {
-      if (musician) {
-        this.musicians.add(musician);
+    addModal.onDidDismiss(space => {
+      if (space) {
+        this.spaces.add(space);
       }
     })
     addModal.present();
   }
 
-  deleteMusician(musician) {
-    this.musicians.delete(musician);
+  deleteSpace(space) {
+    this.spaces.delete(space);
   }
+  */
 
-  openMusician(musician: Musician) {
-    this.navCtrl.push('MusicianDetailPage', {
-      musician: musician
+  openSpace(space: Space) {
+    this.navCtrl.push('SpaceDetailPage', {
+      space: space
     });
   }
 }
