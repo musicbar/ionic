@@ -10,11 +10,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { Musicians } from '../mocks/providers/musicians';
+import { Spaces } from '../mocks/providers/spaces';
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
-import { SpacesProvider } from '../providers/spaces/spaces';
-
+// import { SpacesProvider } from '../providers/spaces/spaces';
 // import { Musicians } from '../providers/musicians/musicians';
 
 // The translate loader needs to know where to load i18n files
@@ -70,7 +70,7 @@ export function provideSettings(storage: Storage) {
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Musicians,
-    SpacesProvider
+    Spaces
   ]
 })
 export class AppModule { }
