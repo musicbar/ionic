@@ -19,4 +19,8 @@ export class MusicianDetailPage {
     console.log('ionViewDidLoad MusicianDetailPage');
   }
 
+  showList() {
+    this.navCtrl.push('MusiciansPage');
+  }
+
 }

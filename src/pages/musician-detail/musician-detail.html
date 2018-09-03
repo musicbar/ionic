@@ -1,20 +1,24 @@
 <ion-header>
-
+  <div><img (click)="showList()" src="assets/img/musian_detail_0.png" /></div>
+  <!--
   <ion-navbar>
     <ion-title>{{ musician.name }}</ion-title>
   </ion-navbar>
-
+  -->
 </ion-header>
 
-
 <ion-content>
+  <br><br><div class="musician-detail"><img src="assets/img/musian_detail_1.png"/></div>
+  <br><br><div class="musician-detail"><img src="assets/img/musian_detail_2.png"/></div>
+  <br><br><div class="musician-detail"><img src="assets/img/musian_detail_3.png"/></div>
+  <!--
   <div class="musician-profile" text-center #profilePic [style.background-image]="'url(' + musician.photo + ')'">
   </div>
-
   <div class="musician-detail" padding>
     <h2>{{musician.name}}</h2>
     <p>{{musician.description}}</p>
     <p>url({{musician.photo}})</p>
     <img [src]="musician.photo" />
   </div>
+    -->
 </ion-content>

@@ -20,12 +20,19 @@
   <ion-list>
     <ion-item-sliding *ngFor="let musician of currentMusicians">
       <button ion-item (click)="openMusician(musician)">
+        <img [src]="musician.photo" />
+        <p align='center'>
+          <b>{{musician.name}}</b><br>
+          <small>Available though <b>11/11</b><br>from <b>$50</b></small>
+        </p>
+        <!--
         <ion-avatar item-start>
           <img [src]="musician.photo" />
         </ion-avatar>
         <h2>{{musician.name}}</h2>
         <p>{{musician.description}}</p>
         <ion-note item-end *ngIf="musician.description">{{musician.description}}</ion-note>
+        -->
       </button>
       <!--
       <ion-item-options>
