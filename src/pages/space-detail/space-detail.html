@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>{{space.name}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <!-- <br><br><div class="space-detail"><img src="assets/img/musian_detail_3.png"/></div> -->
+    <div class="space-profile" text-center #profilePic [style.background-image]="'url(' + space.photo + ')'">
+    </div>
+    <div class="space-detail" padding>
+      <h2>{{space.name}}</h2>
+      <p>{{space.description}}</p>
+      <img [src]="space.photo" />
+      <p><small>[ description here ]</small></p>
+    </div>
+  </ion-content>
+    
