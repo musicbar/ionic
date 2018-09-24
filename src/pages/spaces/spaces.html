@@ -1,6 +1,25 @@
 <ion-header>
-  <div><img src="assets/img/search_bar.png" /></div>
- 
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="x">
+      <ion-segment-button value="all" checked>
+        All
+      </ion-segment-button>
+      <ion-segment-button value="pubs">
+        Pubs
+      </ion-segment-button>
+      <ion-segment-button value="cafe">
+        Cafe
+      </ion-segment-button>
+      <ion-segment-button value="restaurant">
+        Restaurant
+      </ion-segment-button>
+    </ion-segment>
+    <!--
+    <ion-navbar no-border-top>
+      <ion-searchbar (ionInput)="getSpaces($event)"></ion-searchbar>
+    </ion-navbar>
+    -->
+  </ion-toolbar>
   <!--
   <ion-slides pager>
     <ion-slide><img src="../../assets/img/banner_old.png" class="slide-image" /></ion-slide>
@@ -18,23 +37,30 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <ion-searchbar (ionInput)="getSpaces($event)"></ion-searchbar>
+  <ion-list no-lines>
     <ion-item-sliding *ngFor="let space of currentSpaces">
       <button ion-item (click)="openSpace(space)">
+        <ion-card>
           <img [src]="space.photo" />
-          <p align='center'>
-            <b>{{space.name}}</b><br>
-            <small>[ description here ]</small>
-            <!-- <small>Available though <b>11/11</b><br>from <b>$50</b></small> -->
-          </p>
-          <!--
-          <ion-avatar item-start>
-            <img [src]="space.photo" />
-          </ion-avatar>
-          <h2>{{space.name}}</h2>
-          <p>{{space.description}}</p>
-          <ion-note item-end *ngIf="space.description">{{space.description}}</ion-note>
-          -->
+          <div class="card-title"><small>{{space.name}}</small></div>
+          <div class="card-subtitle">[ description here ]</div>
+        </ion-card>
+        <!--
+        <img [src]="space.photo" />
+        <p align='center'>
+          <b>{{space.name}}</b><br>
+          <small>[ description here ]</small>
+        </p>
+        -->
+        <!--
+        <ion-avatar item-start>
+          <img [src]="space.photo" />
+        </ion-avatar>
+        <h2>{{space.name}}</h2>
+        <p>{{space.description}}</p>
+        <ion-note item-end *ngIf="space.description">{{space.description}}</ion-note>
+        -->
       </button>
       <!--
       <ion-item-options>

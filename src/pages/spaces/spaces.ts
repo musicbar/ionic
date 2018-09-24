@@ -41,4 +41,19 @@ export class SpacesPage {
       space: space
     });
   }
+
+  getSpaces(e) {
+    // Reset items back to all of the items
+    this.currentSpaces = this.spaces.query();
+
+    // set val to the value of the ev target
+    var val = e.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.currentSpaces = this.currentSpaces.filter((item) => {
+        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
 }

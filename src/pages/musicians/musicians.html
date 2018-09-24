@@ -16,14 +16,21 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <ion-list no-lines>
     <ion-item-sliding *ngFor="let musician of currentMusicians">
       <button ion-item (click)="openMusician(musician)">
+        <ion-card>
+          <img [src]="musician.photo" />
+          <div class="card-title">{{musician.name}}</div>
+          <div class="card-subtitle">Available though <b>11/11</b><br>From <b>$50</b> / hour</div>
+        </ion-card>
+        <!--
         <img [src]="musician.photo" />
         <p align='center'>
           <b>{{musician.name}}</b><br>
           <small>Available though <b>11/11</b><br>from <b>$50</b></small>
         </p>
+        -->
         <!--
         <ion-avatar item-start>
           <img [src]="musician.photo" />
@@ -33,13 +40,16 @@
         <ion-note item-end *ngIf="musician.description">{{musician.description}}</ion-note>
         -->
       </button>
-      <!--
       <ion-item-options>
+        <!--
         <button ion-button color="danger" (click)="deleteItem(item)">
           {{ 'DELETE_BUTTON' | translate }}
         </button>
+        -->
+        <button ion-button color="light">Button 1</button>
+        <button ion-button color="">Button 2</button>
+        <button ion-button color="dark">Button 3</button>
       </ion-item-options>
-      -->
     </ion-item-sliding>
   </ion-list>
 </ion-content>

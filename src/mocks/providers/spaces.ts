@@ -45,7 +45,7 @@ export class Spaces {
         "description": ""
       },
       {
-        "name": "The Stone at The New School Glass Box Theatre",
+        "name": "The Stone",
         "photo": "assets/img/space/7.png",
         "description": ""
       },
